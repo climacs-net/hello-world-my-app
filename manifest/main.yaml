@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: library/nginx
+        image: nginx
         ports:
         - containerPort: 8000
 ---
