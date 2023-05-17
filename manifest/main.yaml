@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: library/hello-world
+        image: yeasy/simple-web
         ports:
         - containerPort: 8000
 ---
