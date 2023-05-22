@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld-myapp
-  namespace: helloworld-myapp
+  name: nginx-myapp
+  namespace: nginx-myapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: helloworld-myapp
+      app: nginx-myapp
   template:
     metadata:
       labels:
-        app: helloworld-myapp
+        app: nginx-myapp
     spec:
       containers:
       - name: nginx
@@ -22,11 +22,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: helloworld-myapp-service
-  namespace: helloworld-myapp
+  name: nginx-myapp-service
+  namespace: nginx-myapp
 spec:
   selector:
-    app: helloworld-myapp
+    app: nginx-myapp
   ports:
     - protocol: TCP
       port: 80
