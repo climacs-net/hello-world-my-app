@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: cat-website
-        image: climacs/cat-website-app-intel
+        image: climacs/cat-website-app-intel-v3
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
