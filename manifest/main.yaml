@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nginx-config
-  namespace: default
+  namespace: cat-website-n
 data:
   nginx.conf: |
     server {
@@ -22,7 +22,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cat-website
-  namespace: default
+  namespace: cat-website-n
 spec:
   replicas: 1
   selector:
@@ -52,7 +52,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: cat-website
-  namespace: default
+  namespace: cat-website-n
 spec:
   type: LoadBalancer
   ports:
